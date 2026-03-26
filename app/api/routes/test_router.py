@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from API_Guardian.api.deps import get_db
-from API_Guardian.models.models import TestCase
-from API_Guardian.schemas.test_schema import TestCaseCreate
-from API_Guardian.services.test_runner import run_test
+from app.api.deps import get_db
+from app.models.models import TestCase
+from app.schemas.test_schema import TestCaseCreate
+from app.services.test_runner import run_test
 
 router = APIRouter()
 

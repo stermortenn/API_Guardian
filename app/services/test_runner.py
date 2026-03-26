@@ -1,8 +1,8 @@
 import httpx
 import time
 from sqlalchemy.orm import Session
-from API_Guardian.models.models import TestCase, Endpoint, API, TestRun
-from API_Guardian.services.validator import validate_response
+from app.models.models import TestCase, Endpoint, API, TestRun
+from app.services.validator import validate_response
 
 
 def run_test(test_case_id, db: Session):
@@ -34,7 +34,7 @@ def run_test(test_case_id, db: Session):
         test_case_id=test_case.id,
         status="pass" if is_valid else "fail",
         response_status=response.status_code,
-        response_body=response.json(),
+        response_body=response.json() if response.content else {},
         execution_time=execution_time
     )
 

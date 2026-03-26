@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional, Dict 
 
-class EndPointCreate(BaseModel):
+class EndpointCreate(BaseModel):
     api_id: str
     path: str
     method: str

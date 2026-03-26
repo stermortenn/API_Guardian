@@ -1,7 +1,7 @@
-from sqlalchemy import Column, String, JSON, Integer, ForeignKey
+from sqlalchemy import Column, String, JSON, Integer, ForeignKey, Float
 from sqlalchemy.dialects.postgresql import UUID
-import UUID
-from API_Guardian.db.base import base
+import uuid
+from app.db.base import Base
 
 class API(Base):
     __tablename__ = "apis"

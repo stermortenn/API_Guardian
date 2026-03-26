@@ -1,8 +1,8 @@
 import httpx
 import time
 from sqlalchemy.orm import Session
-from app.models.models import TestCase, Endpoint, API, TestRun
-from app.services.validator import validate_response
+from API_Guardian.models.models import TestCase, Endpoint, API, TestRun
+from API_Guardian.services.validator import validate_response
 
 
 def run_test(test_case_id, db: Session):
